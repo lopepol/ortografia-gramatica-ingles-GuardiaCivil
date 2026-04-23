@@ -175,6 +175,10 @@ main{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;}
       Entrar →
     </button>
     <div class="login-note">Colegio Lope de Vega International School · Since 1956</div>
+    <div style="margin-top:1rem;display:flex;gap:0.5rem;justify-content:center;">
+      <button onclick="setTema('oscuro')" style="background:#111;color:#f0f0f0;border:1px solid #333;padding:0.3rem 0.8rem;border-radius:4px;cursor:pointer;font-size:0.8rem;">🌙 Oscuro</button>
+      <button onclick="setTema('claro')" style="background:#fff;color:#333;border:1px solid #ccc;padding:0.3rem 0.8rem;border-radius:4px;cursor:pointer;font-size:0.8rem;">☀️ Claro</button>
+    </div>
   </div>
 </div>
 
@@ -342,6 +346,33 @@ async function logout() {
   sessionStorage.removeItem('lopepol_auth');
   location.reload();
 }
+
+function setTema(tema) {
+  if (tema === 'claro') {
+    document.body.classList.add('tema-claro');
+    localStorage.setItem('lopepol_tema', 'claro');
+    const btn = document.getElementById('btn-tema');
+    if (btn) btn.textContent = '🌙';
+  } else {
+    document.body.classList.remove('tema-claro');
+    localStorage.setItem('lopepol_tema', 'oscuro');
+    const btn = document.getElementById('btn-tema');
+    if (btn) btn.textContent = '☀️';
+  }
+}
+
+function toggleTema() {
+  const esClaro = document.body.classList.contains('tema-claro');
+  setTema(esClaro ? 'oscuro' : 'claro');
+}
+
+// Aplicar tema guardado al cargar
+(function() {
+  const temaGuardado = localStorage.getItem('lopepol_tema');
+  if (temaGuardado === 'claro') {
+    document.body.classList.add('tema-claro');
+  }
+})();
 
 // ════════════════════════════════════════
 //  API CALLS
