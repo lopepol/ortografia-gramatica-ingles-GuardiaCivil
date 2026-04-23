@@ -359,3 +359,75 @@ function getExamenIngles() {
     return newP;
   });
 }
+
+// ══════════════════════════════════════════════════════════════════════
+// BANCO ADICIONAL — Más ejercicios para mayor variedad
+// ══════════════════════════════════════════════════════════════════════
+
+// Añadir al banco existente
+TODAS_FRASES_ORT.push(
+  // Frases extra ortografía — errores frecuentes en exámenes
+  { f:"extra", texto_previo:"El", A:{word:"haministrador",error:true}, texto_AB:"firmó el", B:{word:"albalá",error:false}, texto_BC:"con total", C:{word:"indiferencia",error:false}, texto_CD:"ante los", D:{word:"testigos",error:false}, texto_post:".", explicacion:"A: 'haministrador' → 'administrador' (sin h inicial)." },
+  { f:"extra", texto_previo:"La", A:{word:"absención",error:true}, texto_AB:"en las", B:{word:"urnas",error:false}, texto_BC:"fue", C:{word:"récord",error:false}, texto_CD:"este", D:{word:"año",error:false}, texto_post:".", explicacion:"A: 'absención' → 'abstención' (bt, no bs)." },
+  { f:"extra", texto_previo:"El", A:{word:"yerno",error:false}, texto_AB:"llegó con su", B:{word:"suegra",error:false}, texto_BC:"y un", C:{word:"ramillete",error:false}, texto_CD:"de", D:{word:"gladiolos",error:false}, texto_post:".", explicacion:"Todas correctas." },
+  { f:"extra", texto_previo:"El", A:{word:"vándalo",error:false}, texto_AB:"", B:{word:"rompió",error:false}, texto_BC:"el", C:{word:"cristal",error:false}, texto_CD:"de un", D:{word:"manotazo",error:false}, texto_post:".", explicacion:"Todas correctas." },
+  { f:"extra", texto_previo:"La", A:{word:"exuberancia",error:false}, texto_AB:"de la", B:{word:"bellejación",error:true}, texto_BC:"vegetal", C:{word:"sorprendió",error:false}, texto_CD:"a los", D:{word:"excursionistas",error:false}, texto_post:".", explicacion:"B: 'bellejación' → 'vegetación' (error de concepto y ortografía)." },
+  { f:"extra", texto_previo:"Necesitamos", A:{word:"proveer",error:false}, texto_AB:"de", B:{word:"víveres",error:false}, texto_BC:"al", C:{word:"destacamento",error:false}, texto_CD:"antes del", D:{word:"amaneser",error:true}, texto_post:".", explicacion:"D: 'amaneser' → 'amanecer' (c, no s)." },
+  { f:"extra", texto_previo:"El", A:{word:"suboficial",error:false}, texto_AB:"redactó el", B:{word:"atestado",error:false}, texto_BC:"con", C:{word:"exaustividad",error:true}, texto_CD:"y lo", D:{word:"remitió",error:false}, texto_post:"al juzgado.", explicacion:"C: 'exaustividad' → 'exhaustividad' (exh-)." },
+  { f:"extra", texto_previo:"La", A:{word:"bienvenida",error:false}, texto_AB:"al nuevo", B:{word:"recluta",error:false}, texto_BC:"fue", C:{word:"efusiba",error:true}, texto_CD:"y", D:{word:"emotiva",error:false}, texto_post:".", explicacion:"C: 'efusiba' → 'efusiva' (v, no b)." },
+  { f:"extra", texto_previo:"El", A:{word:"agente",error:false}, texto_AB:"", B:{word:"interceptó",error:false}, texto_BC:"el", C:{word:"vehículo",error:false}, texto_CD:"en el", D:{word:"peage",error:true}, texto_post:".", explicacion:"D: 'peage' → 'peaje' (j)." },
+  { f:"extra", texto_previo:"Los", A:{word:"detenidos",error:false}, texto_AB:"fueron", B:{word:"traladados",error:true}, texto_BC:"al", C:{word:"calabozo",error:false}, texto_CD:"de la", D:{word:"comisaría",error:false}, texto_post:".", explicacion:"B: 'traladados' → 'trasladados' (doble s: traslad-)." },
+  { f:"extra", texto_previo:"La", A:{word:"amnistía",error:false}, texto_AB:"", B:{word:"benefició",error:false}, texto_BC:"a", C:{word:"numerozos",error:true}, texto_CD:"", D:{word:"presos",error:false}, texto_post:".", explicacion:"C: 'numerozos' → 'numerosos' (s, no z)." },
+  { f:"extra", texto_previo:"El", A:{word:"forense",error:false}, texto_AB:"", B:{word:"certificó",error:false}, texto_BC:"el", C:{word:"óbito",error:false}, texto_CD:"a las", D:{word:"docehoras",error:true}, texto_post:".", explicacion:"D: 'docehoras' → 'doce horas' (dos palabras)." },
+  { f:"extra", texto_previo:"La", A:{word:"benevolencia",error:false}, texto_AB:"del", B:{word:"magistrado",error:false}, texto_BC:"", C:{word:"sorprendió",error:false}, texto_CD:"a la", D:{word:"acusasión",error:true}, texto_post:".", explicacion:"D: 'acusasión' → 'acusación' (-ción)." },
+  { f:"extra", texto_previo:"El", A:{word:"guardia",error:false}, texto_AB:"portaba su", B:{word:"arma",error:false}, texto_BC:"con", C:{word:"diligencia",error:false}, texto_CD:"y", D:{word:"precaución",error:false}, texto_post:".", explicacion:"Todas correctas." },
+  { f:"extra", texto_previo:"La", A:{word:"excavación",error:false}, texto_AB:"", B:{word:"reveló",error:false}, texto_BC:"", C:{word:"vestigios",error:false}, texto_CD:"de una antigua", D:{word:"sivilización",error:true}, texto_post:".", explicacion:"D: 'sivilización' → 'civilización' (c, no s)." }
+);
+
+TODAS_PREGUNTAS_GRAM.push(
+  // Gramática extra
+  { f:"extra", A:"El agua estaba muy fría.", B:"Haiga quien haiga, entro yo primero.", C:"No me gusta que llegues tarde.", D:"Los niños se durmieron enseguida.", incorrectas:["B"], principal:"B", explicacion:"B: 'Haiga' no existe en español. La forma correcta es 'haya' (subjuntivo de haber)." },
+  { f:"extra", A:"Te lo dije para que te enteraras.", B:"Espero de que vengas pronto.", C:"Me alegra que estés aquí.", D:"Es necesario que lo sepas.", incorrectas:["B"], principal:"B", explicacion:"B: dequeísmo. 'Espero de que' → 'Espero que'." },
+  { f:"extra", A:"Se venden pisos.", B:"Se vende pisos.", C:"Se alquilan locales.", D:"Se necesitan empleados.", incorrectas:["B"], principal:"B", explicacion:"B: falta de concordancia. 'pisos' es plural → 'Se venden pisos'." },
+  { f:"extra", A:"Cállate la boca.", B:"Sube arriba a por la maleta.", C:"El agente actuó con profesionalidad.", D:"La declaración fue tomada en tiempo y forma.", incorrectas:["A","B"], principal:"A", explicacion:"A: 'Cállate la boca' es redundante (pleonasmo): 'Cállate'. B: 'Sube arriba' es redundante: 'Sube a por la maleta'." },
+  { f:"extra", A:"Fue él quien lo hizo.", B:"Entre tú y yo no hay secretos.", C:"Según tú, todo está bien.", D:"Hasta mí me parece excesivo.", incorrectas:["D"], principal:"D", explicacion:"D: 'Hasta mí' → 'Hasta a mí' (preposición 'a' necesaria con pronombre de primera persona)." },
+  { f:"extra", A:"No sé si vendrá.", B:"Dime donde has puesto las llaves.", C:"¿Sabes cuándo llega el tren?", D:"No entiendo por qué lo hizo.", incorrectas:["B"], principal:"B", explicacion:"B: 'donde' en interrogativa indirecta lleva tilde: '¿Dime dónde has puesto las llaves?'" },
+  { f:"extra", A:"Los alumnos aprobaron el examen.", B:"La gente estaban muy nerviosos.", C:"El equipo ganó el campeonato.", D:"La mayoría votó en contra.", incorrectas:["B"], principal:"B", explicacion:"B: 'La gente' es singular colectivo → 'estaba muy nerviosa'." },
+  { f:"extra", A:"Me se cayó el móvil al suelo.", B:"Se me cayó el vaso.", C:"Se le olvidó el paraguas.", D:"Se nos acabó el tiempo.", incorrectas:["A"], principal:"A", explicacion:"A: 'Me se' → 'Se me' (el pronombre reflexivo 'se' siempre va antes)." },
+  { f:"extra", A:"Le dije a María que viniera.", B:"La llamé por teléfono ayer.", C:"Le expliqué el problema detenidamente.", D:"La di un regalo por su cumpleaños.", incorrectas:["D"], principal:"D", explicacion:"D: laísmo. 'La di' → 'Le di' (complemento indirecto femenino)." },
+  { f:"extra", A:"Prefiero que lo hagas tú.", B:"Ojalá llueva esta tarde.", C:"Quizás venga mañana.", D:"Tal vez vendrá o tal vez no.", incorrectas:[], principal:"", explicacion:"Todas las opciones son correctas gramaticalmente." },
+  { f:"extra", A:"No hay ningún problema.", B:"Nunca jamás lo haré.", C:"No he visto a nadie.", D:"Tampoco lo sé yo.", incorrectas:["B"], principal:"B", explicacion:"B: 'Nunca jamás' es redundante (pleonasmo). Correcto: 'Nunca lo haré' o 'Jamás lo haré'." },
+  { f:"extra", A:"El sargento y la cabo llegaron puntuales.", B:"Tanto él como ella estaban de acuerdo.", C:"Ni Juan ni Pedro sabían la respuesta.", D:"O tú o yo tenemos que ir.", incorrectas:[], principal:"", explicacion:"Todas son correctas." },
+  { f:"extra", A:"Es una mujer muy trabajadora.", B:"Esa chica es muy buena persona.", C:"El problema está en que no escuchas.", D:"Es un chico muy listo e inteligente.", incorrectas:["D"], principal:"D", explicacion:"D: pleonasmo. 'Listo e inteligente' son sinónimos en este contexto. Aunque no es error gramatical grave, 'listo' aquí es redundante con 'inteligente'." },
+  { f:"extra", A:"Voy a por el pan.", B:"El detenido fue puesto en libertad.", C:"Se lo dije de buenas maneras.", D:"Anduve todo el día de acá para allá.", incorrectas:[], principal:"", explicacion:"Todas son correctas." },
+  { f:"extra", A:"Cometió el delito a sabiendas.", B:"Lo hizo adrede para perjudicarte.", C:"Actuó de motu proprio.", D:"Llegó el primero con diferencia.", incorrectas:["C"], principal:"C", explicacion:"C: 'motu proprio' → 'motu proprio' es correcto en latín, pero 'de motu proprio' lleva una 'de' incorrecta. La expresión es simplemente 'motu proprio'." }
+);
+
+TODAS_PREGUNTAS_ING.push(
+  // Inglés extra — temas variados nivel A2-B1
+  { f:"extra", pregunta:"She _____ to the gym three times a week.", A:"go", B:"goes", C:"is going", D:"going", correcta:"B", explicacion:"Present simple for habits/routines. 3rd person singular: goes." },
+  { f:"extra", pregunta:"I haven't seen him _____ last Monday.", A:"for", B:"since", C:"ago", D:"during", correcta:"B", explicacion:"'Since' + specific point in time. 'For' + duration." },
+  { f:"extra", pregunta:"By the time we arrived, the film _____.", A:"already started", B:"has already started", C:"had already started", D:"was already starting", correcta:"C", explicacion:"Past perfect for an action completed before another past action." },
+  { f:"extra", pregunta:"You _____ smoke here. It's forbidden.", A:"mustn't", B:"needn't", C:"couldn't", D:"wouldn't", correcta:"A", explicacion:"'Mustn't' = prohibition. 'Needn't' = not necessary (different meaning)." },
+  { f:"extra", pregunta:"The suspect _____ for hours when the detective arrived.", A:"has been questioned", B:"was being questioned", C:"had questioned", D:"questioned", correcta:"B", explicacion:"Past continuous passive for ongoing action at a past moment." },
+  { f:"extra", pregunta:"_____ you mind opening the window?", A:"Will", B:"Shall", C:"Would", D:"Could", correcta:"C", explicacion:"'Would you mind + gerund' is a polite request." },
+  { f:"extra", pregunta:"She asked me _____ I had seen her bag.", A:"if", B:"whether or not", C:"that", D:"what", correcta:"A", explicacion:"Reported yes/no questions use 'if' or 'whether'." },
+  { f:"extra", pregunta:"He _____ be at home — his car is outside.", A:"must", B:"should", C:"might", D:"can", correcta:"A", explicacion:"'Must' for logical deduction (near certainty)." },
+  { f:"extra", pregunta:"I'd rather you _____ tell anyone about this.", A:"don't", B:"won't", C:"didn't", D:"wouldn't", correcta:"C", explicacion:"'I'd rather + subject + past simple' for preference about someone else's action." },
+  { f:"extra", pregunta:"The new law _____ into effect next month.", A:"comes", B:"will come", C:"is coming", D:"both B and C", correcta:"D", explicacion:"Both 'will come' (prediction) and 'is coming' (planned future) are correct here." },
+  { f:"extra", pregunta:"Despite _____ hard, he failed the exam.", A:"study", B:"studied", C:"studying", D:"to study", correcta:"C", explicacion:"'Despite' + gerund (verb -ing)." },
+  { f:"extra", pregunta:"The officer told the driver to pull _____.", A:"over", B:"out", C:"up", D:"off", correcta:"A", explicacion:"'Pull over' = stop the vehicle at the side of the road." },
+  { f:"extra", pregunta:"No sooner _____ the alarm than everyone ran out.", A:"had rung", B:"rang", C:"had it rung", D:"it had rung", correcta:"C", explicacion:"'No sooner + inverted auxiliary + subject': 'No sooner had it rung'." },
+  { f:"extra", pregunta:"She _____ used to living alone by now.", A:"got", B:"has got", C:"has gotten", D:"is", correcta:"B", explicacion:"'Have got used to' = be now accustomed to (present perfect)." },
+  { f:"extra", pregunta:"The report needs _____ before tomorrow.", A:"finish", B:"to finish", C:"finishing", D:"finished", correcta:"C", explicacion:"'Need + gerund' (passive meaning: the report needs to be finished)." },
+  { f:"extra", pregunta:"They _____ be twins — they look so alike.", A:"must", B:"should", C:"may", D:"can", correcta:"A", explicacion:"'Must' for strong logical deduction." },
+  { f:"extra", pregunta:"I wish I _____ speak Spanish fluently.", A:"can", B:"could", C:"will", D:"would", correcta:"B", explicacion:"'I wish + past simple' for present wishes we can't fulfil." },
+  { f:"extra", pregunta:"The thief _____ through the back window.", A:"broke in", B:"broke out", C:"broke up", D:"broke down", correcta:"A", explicacion:"'Break in' = enter by force." },
+  { f:"extra", pregunta:"_____ the rain, the match continued.", A:"Despite of", B:"In spite", C:"Although", D:"Despite", correcta:"D", explicacion:"'Despite' + noun/gerund (no 'of'). 'In spite of' is correct with 'of'." },
+  { f:"extra", pregunta:"How _____ sugar do you take in your coffee?", A:"many", B:"much", C:"lot of", D:"few", correcta:"B", explicacion:"'Sugar' is uncountable → 'how much'." },
+  { f:"extra", pregunta:"By 2030, scientists _____ a cure for the disease.", A:"will find", B:"will have found", C:"are finding", D:"find", correcta:"B", explicacion:"Future perfect for action completed before a future point." },
+  { f:"extra", pregunta:"It's time you _____ your homework.", A:"do", B:"did", C:"have done", D:"will do", correcta:"B", explicacion:"'It's time + subject + past simple' for actions overdue." },
+  { f:"extra", pregunta:"She _____ rather stay home than go to the party.", A:"will", B:"should", C:"would", D:"could", correcta:"C", explicacion:"'Would rather + bare infinitive' for preference." },
+  { f:"extra", pregunta:"The police officer _____ his badge to identify himself.", A:"showed", B:"shown", C:"was showing", D:"shows", correcta:"A", explicacion:"Past simple for completed action in a past narrative." },
+  { f:"extra", pregunta:"We need to look _____ this matter more carefully.", A:"at", B:"for", C:"after", D:"into", correcta:"D", explicacion:"'Look into' = investigate." }
+);
